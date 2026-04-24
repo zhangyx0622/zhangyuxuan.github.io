@@ -2,16 +2,17 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="ubuntu常用命令, 深度学习,学生">
     <meta name="description" content="备份、更换、更新软件源备份软件源
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
 
+
 修改文件
 sudo vi /etc/apt/sources.list
-国内主要软件源
-">
+
+国内主要软件">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -39,7 +40,7 @@ sudo vi /etc/apt/sources.list
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
     
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
@@ -472,10 +473,12 @@ sudo vi /etc/apt/sources.list
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="备份、更换、更新软件源"><a href="#备份、更换、更新软件源" class="headerlink" title="备份、更换、更新软件源"></a>备份、更换、更新软件源</h2><p>备份软件源</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">cp</span> /etc/apt/sources.list /etc/apt/sources.list.backup<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<a id="more"></a>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">cp</span> /etc/apt/sources.list /etc/apt/sources.list.backup
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<span id="more"></span>
 <p>修改文件</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">vi</span> /etc/apt/sources.list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">vi</span> /etc/apt/sources.list
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>国内主要软件源</p>
 <pre class="line-numbers language-bash"><code class="language-bash">
 <span class="token comment" spellcheck="true"># Ubuntu 官方源  </span>
@@ -488,7 +491,8 @@ deb-src http://archive.ubuntu.com/ubuntu/ gutsy main restricted universe multive
 deb-src http://archive.ubuntu.com/ubuntu/ gutsy-security main restricted universe multiverse
 deb-src http://archive.ubuntu.com/ubuntu/ gutsy-updates main restricted universe multiverse
 deb-src http://archive.ubuntu.com/ubuntu/ gutsy-proposed main restricted universe multiverse
-deb-src http://archive.ubuntu.com/ubuntu/ gutsy-backports main restricted universe multiverse<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+deb-src http://archive.ubuntu.com/ubuntu/ gutsy-backports main restricted universe multiverse
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#网易163</span>
 deb http://mirrors.163.com/ubuntu/ trusty main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ trusty-security main restricted universe multiverse
@@ -499,7 +503,8 @@ deb-src http://mirrors.163.com/ubuntu/ trusty main restricted universe multivers
 deb-src http://mirrors.163.com/ubuntu/ trusty-security main restricted universe multiverse
 deb-src http://mirrors.163.com/ubuntu/ trusty-updates main restricted universe multiverse
 deb-src http://mirrors.163.com/ubuntu/ trusty-proposed main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ trusty-backports main restricted universe multiverse<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+deb-src http://mirrors.163.com/ubuntu/ trusty-backports main restricted universe multiverse
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 阿里云</span>
 deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
@@ -510,7 +515,8 @@ deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiv
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 中科大</span>
 deb http://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
 deb http://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
@@ -521,49 +527,70 @@ deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multi
 deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
 deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
 deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse
-deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>更新软件源</li>
 </ul>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> update
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h2><p>[bash]修改单用户环境变量文件</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">vi</span> ~/.bashrc  <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">vi</span> ~/.bashrc  
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>[bash]修改所有用户环境变量文件</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">vi</span> /etc/profile<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">vi</span> /etc/profile
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="root权限和用户权限切换"><a href="#root权限和用户权限切换" class="headerlink" title="root权限和用户权限切换"></a>root权限和用户权限切换</h2><p> 切换至root权限</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">su</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">su</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>切换至用户权限</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">su</span> <span class="token operator">&lt;</span>username<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">su</span> <span class="token operator">&lt;</span>username<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>修改当前账号(root或普通用户)的密码</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">passwd</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">passwd</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>修改指定用户密码</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">passwd</span> <span class="token operator">&lt;</span>username<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">passwd</span> <span class="token operator">&lt;</span>username<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="服务器文件传输"><a href="#服务器文件传输" class="headerlink" title="服务器文件传输"></a>服务器文件传输</h2><p>本地向服务器文件传输</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">scp</span> -r <span class="token operator">&lt;</span>uesrname<span class="token operator">></span>@<span class="token operator">&lt;</span>服务器ip<span class="token operator">></span>：<span class="token operator">&lt;</span>服务器指定文件夹路径<span class="token operator">></span> <span class="token operator">&lt;</span>本地所存文件路径<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">scp</span> -r <span class="token operator">&lt;</span>uesrname<span class="token operator">></span>@<span class="token operator">&lt;</span>服务器ip<span class="token operator">></span>：<span class="token operator">&lt;</span>服务器指定文件夹路径<span class="token operator">></span> <span class="token operator">&lt;</span>本地所存文件路径<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>服务器文件下载到本地</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">scp</span> -r  <span class="token operator">&lt;</span>本地所存文件路径<span class="token operator">></span>  <span class="token operator">&lt;</span>uesrname<span class="token operator">></span>@<span class="token operator">&lt;</span>服务器ip<span class="token operator">></span>：<span class="token operator">&lt;</span>服务器指定文件夹路径<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">scp</span> -r  <span class="token operator">&lt;</span>本地所存文件路径<span class="token operator">></span>  <span class="token operator">&lt;</span>uesrname<span class="token operator">></span>@<span class="token operator">&lt;</span>服务器ip<span class="token operator">></span>：<span class="token operator">&lt;</span>服务器指定文件夹路径<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="ssh服务"><a href="#ssh服务" class="headerlink" title="ssh服务"></a>ssh服务</h2><p>安装ssh</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> openssh-server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> openssh-server
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>启动ssh服务</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">service</span> sshd start<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">service</span> sshd start
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>查看ssh服务是否开启</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">ps</span> -e <span class="token operator">|</span> <span class="token function">grep</span> <span class="token function">ssh</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">ps</span> -e <span class="token operator">|</span> <span class="token function">grep</span> <span class="token function">ssh</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>通过ssh远程访问服务器</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">ssh</span> <span class="token operator">&lt;</span>username<span class="token operator">></span>@<span class="token operator">&lt;</span>ip<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">ssh</span> <span class="token operator">&lt;</span>username<span class="token operator">></span>@<span class="token operator">&lt;</span>ip<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="查看系统信息"><a href="#查看系统信息" class="headerlink" title="查看系统信息"></a>查看系统信息</h2><p>查看系统版本信息</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">uname</span> -a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">uname</span> -a
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>修改主机名</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">vi</span> /etc/hostname<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">vi</span> /etc/hostname
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>查看英伟达GPU型号</p>
-<pre class="line-numbers language-bash"><code class="language-bash">lspci <span class="token operator">|</span> <span class="token function">grep</span> -i nvidia<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">lspci <span class="token operator">|</span> <span class="token function">grep</span> -i nvidia
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>查看NVIDIA驱动版本</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> dpkg --list <span class="token operator">|</span> <span class="token function">grep</span> nvidia-*<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> dpkg --list <span class="token operator">|</span> <span class="token function">grep</span> nvidia-*
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="Python安装及包管理"><a href="#Python安装及包管理" class="headerlink" title="Python安装及包管理"></a>Python安装及包管理</h2><p>为python3安装pip</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> apt <span class="token function">install</span> python3-pip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> apt <span class="token function">install</span> python3-pip
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>查看python及其第三方库路径</p>
-<pre class="line-numbers language-bash"><code class="language-bash">python <span class="token comment" spellcheck="true">#python3</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">python <span class="token comment" spellcheck="true">#python3</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> os
-os<span class="token punctuation">.</span>sys<span class="token punctuation">.</span>path<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+os<span class="token punctuation">.</span>sys<span class="token punctuation">.</span>path
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
             </div>
             <hr/>
@@ -620,7 +647,7 @@ os<span class="token punctuation">.</span>sys<span class="token punctuation">.</
         <div class="disqus-card card" data-aos="fade-up">
     <div id="disqus_thread" class="card-content">
         <noscript>Please enable JavaScript to view the
-            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
         </noscript>
     </div>
 </div>
@@ -673,7 +700,8 @@ os<span class="token punctuation">.</span>sys<span class="token punctuation">.</
 
 tf.get_default_graph() # 获取当前的默认图
 
-用户自己创建计算图，用with创建图指定
+
+用户自己创建计算图，用with创建图指
                         
                     </div>
                     <div class="publish-info">
@@ -695,7 +723,7 @@ tf.get_default_graph() # 获取当前的默认图
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/深度学习/">
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">深度学习</span>
                     </a>
                     
@@ -724,8 +752,7 @@ tf.get_default_graph() # 获取当前的默认图
                         
                             前提1.安装好tensorflow的gpu版本及其对应CUDA2.有GPU
 1.指定某一块或多块gpu运行方法一# 指定第二块gpu
-CUDA_VISIBLE_DEVICES=1 python {xxx}.py
-方法二export CUDA
+CUDA_VISIBLE_DEVICES=1 python &amp;#123;xxx&amp;#125;
                         
                     </div>
                     <div class="publish-info">
@@ -747,7 +774,7 @@ CUDA_VISIBLE_DEVICES=1 python {xxx}.py
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/深度学习/">
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">深度学习</span>
                     </a>
                     
@@ -890,7 +917,7 @@ CUDA_VISIBLE_DEVICES=1 python {xxx}.py
                     var years = days * 365;
                     var today = new Date();
                     var startYear = "2019";
-                    var startMonth = "09";
+                    var startMonth = "9";
                     var startDate = "16";
                     var startHour = "0";
                     var startMinute = "0";

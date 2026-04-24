@@ -2,13 +2,12 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="tensorflow入门笔记1:指定GPU及分配显存, 深度学习,学生">
     <meta name="description" content="前提1.安装好tensorflow的gpu版本及其对应CUDA2.有GPU
 1.指定某一块或多块gpu运行方法一# 指定第二块gpu
-CUDA_VISIBLE_DEVICES=1 python {xxx}.py
-方法二export CUDA">
+CUDA_VISIBLE_DEVICES=1 python &amp;amp;#123;xxx&amp;amp;#125;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -36,7 +35,7 @@ CUDA_VISIBLE_DEVICES=1 python {xxx}.py
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
     
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
@@ -433,7 +432,7 @@ CUDA_VISIBLE_DEVICES=1 python {xxx}.py
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/深度学习/">
+                            <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
                                 <span class="chip bg-color">深度学习</span>
                             </a>
                         
@@ -468,13 +467,16 @@ CUDA_VISIBLE_DEVICES=1 python {xxx}.py
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h4><h4 id="1-安装好tensorflow的gpu版本及其对应CUDA"><a href="#1-安装好tensorflow的gpu版本及其对应CUDA" class="headerlink" title="1.安装好tensorflow的gpu版本及其对应CUDA"></a>1.安装好tensorflow的gpu版本及其对应CUDA</h4><h4 id="2-有GPU"><a href="#2-有GPU" class="headerlink" title="2.有GPU"></a>2.有GPU</h4><a id="more"></a>
+                <h4 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h4><h4 id="1-安装好tensorflow的gpu版本及其对应CUDA"><a href="#1-安装好tensorflow的gpu版本及其对应CUDA" class="headerlink" title="1.安装好tensorflow的gpu版本及其对应CUDA"></a>1.安装好tensorflow的gpu版本及其对应CUDA</h4><h4 id="2-有GPU"><a href="#2-有GPU" class="headerlink" title="2.有GPU"></a>2.有GPU</h4><span id="more"></span>
 <h2 id="1-指定某一块或多块gpu运行"><a href="#1-指定某一块或多块gpu运行" class="headerlink" title="1.指定某一块或多块gpu运行"></a>1.指定某一块或多块gpu运行</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 指定第二块gpu</span>
-CUDA_VISIBLE_DEVICES<span class="token operator">=</span>1 python <span class="token punctuation">{</span>xxx<span class="token punctuation">}</span>.py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+CUDA_VISIBLE_DEVICES<span class="token operator">=</span>1 python <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;xxx&amp;#125;.py</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">export</span> CUDA_VISIBLE_DEVICES<span class="token operator">=</span>1
-python <span class="token punctuation">{</span>xxx<span class="token punctuation">}</span>.py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+python <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;xxx&amp;#125;.py</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h3 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> os
-os<span class="token punctuation">.</span>environ<span class="token punctuation">[</span><span class="token string">"CUDA_VISIBLE_DEVICES"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"2"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+os<span class="token punctuation">.</span>environ<span class="token punctuation">[</span><span class="token string">"CUDA_VISIBLE_DEVICES"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"2"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>参数参考：</p>
 <table>
 <thead>
@@ -484,23 +486,23 @@ os<span class="token punctuation">.</span>environ<span class="token punctuation"
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">CUDA_VISIBLE_DEVICES=1</td>
+<td align="left">CUDA_VISIBLE_DEVICES&#x3D;1</td>
 <td align="left">Only device 1 will be seen</td>
 </tr>
 <tr>
-<td align="left">CUDA_VISIBLE_DEVICES=0,1</td>
+<td align="left">CUDA_VISIBLE_DEVICES&#x3D;0,1</td>
 <td align="left">Devices 0 and 1 will be visible</td>
 </tr>
 <tr>
-<td align="left">CUDA_VISIBLE_DEVICES=”0,1”</td>
+<td align="left">CUDA_VISIBLE_DEVICES&#x3D;”0,1”</td>
 <td align="left">Same as above, quotation marks are optional</td>
 </tr>
 <tr>
-<td align="left">CUDA_VISIBLE_DEVICES=0,2,3</td>
+<td align="left">CUDA_VISIBLE_DEVICES&#x3D;0,2,3</td>
 <td align="left">Devices 0, 2, 3 will be visible; device 1 is masked</td>
 </tr>
 <tr>
-<td align="left">CUDA_VISIBLE_DEVICES=””</td>
+<td align="left">CUDA_VISIBLE_DEVICES&#x3D;””</td>
 <td align="left">No GPU will be visible</td>
 </tr>
 </tbody></table>
@@ -508,7 +510,8 @@ os<span class="token punctuation">.</span>environ<span class="token punctuation"
 
 config <span class="token operator">=</span> tf<span class="token punctuation">.</span>ConfigProto<span class="token punctuation">(</span>allow_soft_placement<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> allow_soft_placement<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
 config<span class="token punctuation">.</span>gpu_options<span class="token punctuation">.</span>per_process_gpu_memory_fraction <span class="token operator">=</span> <span class="token number">0.4</span>  <span class="token comment" spellcheck="true">#占用40%显存</span>
-sess <span class="token operator">=</span> tf<span class="token punctuation">.</span>Session<span class="token punctuation">(</span>config<span class="token operator">=</span>config）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+sess <span class="token operator">=</span> tf<span class="token punctuation">.</span>Session<span class="token punctuation">(</span>config<span class="token operator">=</span>config）
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>参数参考：</p>
 <table>
 <thead>
@@ -518,19 +521,19 @@ sess <span class="token operator">=</span> tf<span class="token punctuation">.</
 </tr>
 </thead>
 <tbody><tr>
-<td>tf.ConfigProto(log_device_placement=True)</td>
+<td>tf.ConfigProto(log_device_placement&#x3D;True)</td>
 <td align="left">记录设备指派情况</td>
 </tr>
 <tr>
-<td>tf.ConfigProto(allow_soft_placement=True）</td>
+<td>tf.ConfigProto(allow_soft_placement&#x3D;True）</td>
 <td align="left">自动选择一个运行备</td>
 </tr>
 <tr>
-<td>config.gpu_options.allow_growth = True</td>
+<td>config.gpu_options.allow_growth &#x3D; True</td>
 <td align="left">动态申请显存</td>
 </tr>
 <tr>
-<td>config.gpu_options.per_process_gpu_memory_fraction = 0.4</td>
+<td>config.gpu_options.per_process_gpu_memory_fraction &#x3D; 0.4</td>
 <td align="left">限制GPU使用率</td>
 </tr>
 </tbody></table>
@@ -590,7 +593,7 @@ sess <span class="token operator">=</span> tf<span class="token punctuation">.</
         <div class="disqus-card card" data-aos="fade-up">
     <div id="disqus_thread" class="card-content">
         <noscript>Please enable JavaScript to view the
-            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
         </noscript>
     </div>
 </div>
@@ -641,10 +644,11 @@ sess <span class="token operator">=</span> tf<span class="token punctuation">.</
                             备份、更换、更新软件源备份软件源
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
 
+
 修改文件
 sudo vi /etc/apt/sources.list
-国内主要软件源
 
+国内主要软件
                         
                     </div>
                     <div class="publish-info">
@@ -695,8 +699,7 @@ sudo vi /etc/apt/sources.list
                         
                             前提1.安装好tensorflow的gpu版本及其对应CUDA2.有GPU
 1.指定某一块或多块gpu运行方法一# 指定第二块gpu
-CUDA_VISIBLE_DEVICES=1 python {xxx}.py
-方法二export CUDA
+CUDA_VISIBLE_DEVICES=1 python &amp;#123;xxx&amp;#125;
                         
                     </div>
                     <div class="publish-info">
@@ -719,7 +722,7 @@ CUDA_VISIBLE_DEVICES=1 python {xxx}.py
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/深度学习/">
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">深度学习</span>
                     </a>
                     
@@ -862,7 +865,7 @@ CUDA_VISIBLE_DEVICES=1 python {xxx}.py
                     var years = days * 365;
                     var today = new Date();
                     var startYear = "2019";
-                    var startMonth = "09";
+                    var startMonth = "9";
                     var startDate = "16";
                     var startHour = "0";
                     var startMinute = "0";

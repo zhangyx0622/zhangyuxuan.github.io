@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="tensorflow入门笔记3:placeholder机制和Variable变量, 深度学习,学生">
     <meta name="description" content="1.placeholder 机制
@@ -37,7 +37,7 @@ placeholder 机制的作用
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
     
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
@@ -434,7 +434,7 @@ placeholder 机制的作用
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/深度学习/">
+                            <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
                                 <span class="chip bg-color">深度学习</span>
                             </a>
                         
@@ -484,21 +484,23 @@ b <span class="token operator">=</span> tf<span class="token punctuation">.</spa
 result <span class="token operator">=</span> a<span class="token operator">+</span>b
 
 <span class="token keyword">with</span> tf<span class="token punctuation">.</span>Session<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> sess <span class="token punctuation">:</span>
-  sess<span class="token punctuation">.</span>run<span class="token punctuation">(</span>result<span class="token punctuation">,</span>feed_dict<span class="token operator">=</span><span class="token punctuation">{</span>a<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">1.0</span><span class="token punctuation">,</span><span class="token number">2.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>b<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">3.0</span><span class="token punctuation">,</span><span class="token number">4.0</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+  sess<span class="token punctuation">.</span>run<span class="token punctuation">(</span>result<span class="token punctuation">,</span>feed_dict<span class="token operator">=</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;a:[1.0,2.0],b:[3.0,4.0]&amp;#125;)</span>
   <span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
-  ＃输出<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">.</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<a id="more"></a>
+  ＃输出<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">.</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">.</span><span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span id="more"></span>
 <blockquote>
 <p>在 placeholder 定义时，这个位置上的数据类型<code>dtype</code>是需要指定且不可以改变的。 placeholder 中数据的维度信息<code>shape</code>可以根据提供的数据推导得出，所以不一定要给出；或者对于不确定的维度，填入<code>None</code>即可。<br>这里输入<code>a</code>和<code>b</code>定义为常量，这里将它们定义为一个<code>tf.placeholder()</code>，在运行会话时需要通过<code>sess.run()</code>函数的<code>feed_dict</code>来提供<code>a</code>和<code>b</code>的取值。<code>feed_dict</code>是一个字典<code>dict</code>，在字典中需要给出每个用到的<code>placeholder</code>的取值。</p>
 </blockquote>
 <h2 id="2-Varibale变量"><a href="#2-Varibale变量" class="headerlink" title="2.Varibale变量"></a>2.Varibale变量</h2><ul>
-<li><code>tf.Variable()</code>创建变量<pre class="line-numbers language-python"><code class="language-python">tf<span class="token punctuation">.</span>Variable<span class="token punctuation">(</span>initial_value<span class="token punctuation">,</span>
-           trainable<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> 
-           collections<span class="token operator">=</span>None<span class="token punctuation">,</span> 
-           validate_shape<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> 
-           name<span class="token operator">=</span>None<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
+<li><code>tf.Variable()</code>创建变量</li>
 </ul>
+<pre class="line-numbers language-python"><code class="language-python">tf<span class="token punctuation">.</span>Variable<span class="token punctuation">(</span>initial_value<span class="token punctuation">,</span>
+             trainable<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> 
+             collections<span class="token operator">=</span>None<span class="token punctuation">,</span> 
+             validate_shape<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> 
+             name<span class="token operator">=</span>None<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <table>
 <thead>
 <tr>
@@ -538,12 +540,14 @@ result <span class="token operator">=</span> a<span class="token operator">+</sp
 </ul>
 <pre class="line-numbers language-python"><code class="language-python">init <span class="token operator">=</span> tf<span class="token punctuation">.</span>global_variables_initializer<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token keyword">with</span> tf<span class="token punctuation">.</span>Session<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> sess<span class="token punctuation">:</span>
-  sess<span class="token punctuation">.</span>run<span class="token punctuation">(</span>init<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+  sess<span class="token punctuation">.</span>run<span class="token punctuation">(</span>init<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>管理变量的变量空间</li>
 </ul>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">with</span> tf<span class="token punctuation">.</span>variable_scope<span class="token punctuation">(</span><span class="token string">"one"</span><span class="token punctuation">)</span> <span class="token punctuation">:</span>
-a <span class="token operator">=</span> tf<span class="token punctuation">.</span>get_variable <span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">,</span>shape<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>initializer<span class="token operator">=</span>tf<span class="token punctuation">.</span>constant_initializer<span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+a <span class="token operator">=</span> tf<span class="token punctuation">.</span>get_variable <span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">,</span>shape<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>initializer<span class="token operator">=</span>tf<span class="token punctuation">.</span>constant_initializer<span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <blockquote>
 <ul>
 <li>以上代码在名为<code>one</code>的变量空间内创建名字为<code>a</code>的变量;</li>
@@ -607,7 +611,7 @@ a <span class="token operator">=</span> tf<span class="token punctuation">.</spa
         <div class="disqus-card card" data-aos="fade-up">
     <div id="disqus_thread" class="card-content">
         <noscript>Please enable JavaScript to view the
-            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
         </noscript>
     </div>
 </div>
@@ -683,7 +687,7 @@ placeholder 机制的作用
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/深度学习/">
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">深度学习</span>
                     </a>
                     
@@ -715,7 +719,8 @@ placeholder 机制的作用
 
 tf.get_default_graph() # 获取当前的默认图
 
-用户自己创建计算图，用with创建图指定
+
+用户自己创建计算图，用with创建图指
                         
                     </div>
                     <div class="publish-info">
@@ -737,7 +742,7 @@ tf.get_default_graph() # 获取当前的默认图
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/深度学习/">
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">深度学习</span>
                     </a>
                     
@@ -880,7 +885,7 @@ tf.get_default_graph() # 获取当前的默认图
                     var years = days * 365;
                     var today = new Date();
                     var startYear = "2019";
-                    var startMonth = "09";
+                    var startMonth = "9";
                     var startDate = "16";
                     var startHour = "0";
                     var startMinute = "0";
